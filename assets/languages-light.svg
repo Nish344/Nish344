@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 400 210" role="img" aria-labelledby="t d">
+<title id="t">Most used languages</title>
+<desc id="d">Python, Dart, JavaScript, Java, HTML, CSS</desc>
+<style><![CDATA[ .mono { font-family: "JetBrains Mono","IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace; } ]]></style>
+  <rect width="400" height="210" fill="#F2EFE6"/>
+
+  <rect x="5" y="5" width="395" height="205" fill="#111110"/>
+  <rect x="0" y="0" width="395" height="205" fill="#F2EFE6" stroke="#111110" stroke-width="2"/>
+  <rect x="0" y="0" width="395" height="26" fill="#E8E4D8" stroke="#111110" stroke-width="2"/>
+  <text class="mono" x="12" y="17" font-size="10" fill="#55534C" letter-spacing="0.06em">FIG. 02 / LANGUAGES</text>
+  <text class="mono" x="383" y="17" font-size="10" fill="#FF5F00" text-anchor="end" letter-spacing="0.06em">[BYTES]</text>
+
+  <text class="mono" x="16" y="60" font-size="11" fill="#111110">Python</text>
+  <rect x="120" y="48" width="210" height="14" fill="#E8E4D8" stroke="#111110" stroke-width="1"/>
+  <rect x="120" y="48" width="210.0" height="14" fill="#FF5F00" opacity="1.00"/>
+  <text class="mono" x="338" y="60" font-size="11" fill="#55534C" text-anchor="end">33.6%</text>
+
+  <text class="mono" x="16" y="84" font-size="11" fill="#111110">Dart</text>
+  <rect x="120" y="72" width="210" height="14" fill="#E8E4D8" stroke="#111110" stroke-width="1"/>
+  <rect x="120" y="72" width="169.375" height="14" fill="#FF5F00" opacity="0.88"/>
+  <text class="mono" x="338" y="84" font-size="11" fill="#55534C" text-anchor="end">27.1%</text>
+
+  <text class="mono" x="16" y="108" font-size="11" fill="#111110">JavaScript</text>
+  <rect x="120" y="96" width="210" height="14" fill="#E8E4D8" stroke="#111110" stroke-width="1"/>
+  <rect x="120" y="96" width="113.125" height="14" fill="#FF5F00" opacity="0.76"/>
+  <text class="mono" x="338" y="108" font-size="11" fill="#55534C" text-anchor="end">18.1%</text>
+
+  <text class="mono" x="16" y="132" font-size="11" fill="#111110">Java</text>
+  <rect x="120" y="120" width="210" height="14" fill="#E8E4D8" stroke="#111110" stroke-width="1"/>
+  <rect x="120" y="120" width="38.125" height="14" fill="#FF5F00" opacity="0.64"/>
+  <text class="mono" x="338" y="132" font-size="11" fill="#55534C" text-anchor="end">6.1%</text>
+
+  <text class="mono" x="16" y="156" font-size="11" fill="#111110">HTML</text>
+  <rect x="120" y="144" width="210" height="14" fill="#E8E4D8" stroke="#111110" stroke-width="1"/>
+  <rect x="120" y="144" width="36.875" height="14" fill="#FF5F00" opacity="0.52"/>
+  <text class="mono" x="338" y="156" font-size="11" fill="#55534C" text-anchor="end">5.9%</text>
+
+  <text class="mono" x="16" y="180" font-size="11" fill="#111110">CSS</text>
+  <rect x="120" y="168" width="210" height="14" fill="#E8E4D8" stroke="#111110" stroke-width="1"/>
+  <rect x="120" y="168" width="18.125" height="14" fill="#FF5F00" opacity="0.40"/>
+  <text class="mono" x="338" y="180" font-size="11" fill="#55534C" text-anchor="end">2.9%</text>
+
+</svg>

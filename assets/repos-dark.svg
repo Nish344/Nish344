@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 830 168" role="img" aria-labelledby="t d">
+<title id="t">Top repositories</title>
+<desc id="d">payrecover-agent, owasp-top10-web-security, kannada_name_generator, CTF-walkthroughs</desc>
+<style><![CDATA[ .mono { font-family: "JetBrains Mono","IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace; } ]]></style>
+  <rect width="830" height="168" fill="#0F0F0E"/>
+
+  <rect x="5" y="5" width="825" height="163" fill="#F2EFE6"/>
+  <rect x="0" y="0" width="825" height="163" fill="#0F0F0E" stroke="#F2EFE6" stroke-width="2"/>
+  <rect x="0" y="0" width="825" height="26" fill="#181816" stroke="#F2EFE6" stroke-width="2"/>
+  <text class="mono" x="12" y="17" font-size="10" fill="#9A978D" letter-spacing="0.06em">FIG. 05 / TOP REPOS</text>
+  <text class="mono" x="813" y="17" font-size="10" fill="#FF5F00" text-anchor="end" letter-spacing="0.06em">[STARRED]</text>
+
+  <text class="mono" x="20" y="44" font-size="13" fill="#F2EFE6">payrecover-agent</text>
+  <text class="mono" x="280" y="44" font-size="11" fill="#9A978D">failed-payment recovery under policy caps</text>
+  <text class="mono" x="740" y="44" font-size="12" fill="#FF5F00" text-anchor="end">★ 7</text>
+  <text class="mono" x="806" y="44" font-size="11" fill="#9A978D" text-anchor="end">Python</text>
+
+  <text class="mono" x="20" y="72" font-size="13" fill="#F2EFE6">owasp-top10-web-security</text>
+  <text class="mono" x="280" y="72" font-size="11" fill="#9A978D">17/17 PortSwigger labs, auto-updating README</text>
+  <text class="mono" x="740" y="72" font-size="12" fill="#FF5F00" text-anchor="end">★ 6</text>
+  <text class="mono" x="806" y="72" font-size="11" fill="#9A978D" text-anchor="end">Python</text>
+
+  <text class="mono" x="20" y="100" font-size="13" fill="#F2EFE6">kannada_name_generator</text>
+  <text class="mono" x="280" y="100" font-size="11" fill="#9A978D">char-level GRU, loss 2.08 → 1.41</text>
+  <text class="mono" x="740" y="100" font-size="12" fill="#FF5F00" text-anchor="end">★ 6</text>
+  <text class="mono" x="806" y="100" font-size="11" fill="#9A978D" text-anchor="end">Jupyter Notebook</text>
+
+  <text class="mono" x="20" y="128" font-size="13" fill="#F2EFE6">CTF-walkthroughs</text>
+  <text class="mono" x="280" y="128" font-size="11" fill="#9A978D">🔐 Cybersecurity Lab Reports &amp; CTF Write-ups – Rec…</text>
+  <text class="mono" x="740" y="128" font-size="12" fill="#FF5F00" text-anchor="end">★ 3</text>
+  <text class="mono" x="806" y="128" font-size="11" fill="#9A978D" text-anchor="end">—</text>
+
+</svg>
