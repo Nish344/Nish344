@@ -368,19 +368,30 @@ def gen_habits(stats: dict, theme: str) -> str:
 
 
 def gen_activity(stats: dict, theme: str) -> str:
-    """Contribution heatmap — last ~26 weeks, orange intensity."""
+    """Full-year contribution heatmap — same shape as GitHub's graph, orange levels."""
     p = PALETTES[theme]
-    w, h = COL_W, 210
+    w, h = VIEW_W, 188
     days = stats["calendar"]
-    # take last 26 weeks = 182 days
-    days = days[-26 * 7 :] if len(days) >= 26 * 7 else days
-    # reshape into weeks of 7 (Sun..Sat as stored)
-    weeks = [days[i : i + 7] for i in range(0, len(days), 7)]
-    cell, gap = 10, 2
-    origin_x, origin_y = 16, 50
-    levels = [0, 1, 3, 6, 10]  # thresholds
+    # align to complete weeks (Sun→Sat), use full year from API (~52–53 weeks)
+    while days and days[0]["weekday"] != 0:
+        days = days[1:]
+    weeks = [days[i : i + 7] for i in range(0, len(days) - (len(days) % 7), 7)]
+    if not weeks:
+        weeks = [[]]
 
-    def level(n):
+    # fit cells into usable width (leave room for day labels + padding)
+    label_w = 36
+    right_pad = 20
+    usable = w - 5 - label_w - right_pad - 16
+    n_weeks = max(len(weeks), 1)
+    cell = min(12, max(8, (usable / n_weeks) - 2))
+    gap = 2
+    origin_x = 12 + label_w
+    origin_y = 52
+
+    levels = [0, 1, 3, 6, 10]
+
+    def level(n: int) -> int:
         if n <= 0:
             return 0
         for i, t in enumerate(levels):
@@ -388,8 +399,32 @@ def gen_activity(stats: dict, theme: str) -> str:
                 return i
         return 4
 
-    opac = [0.08, 0.28, 0.5, 0.75, 1.0]
-    els = []
+    opac = [0.12, 0.32, 0.52, 0.75, 1.0]
+    els: list[str] = []
+
+    # month labels (first week that starts a new month)
+    months_seen: set[str] = set()
+    for wi, week in enumerate(weeks):
+        if not week:
+            continue
+        # prefer a day mid-week for label stability
+        d0 = week[0]
+        ym = d0["date"][:7]
+        mon = datetime.strptime(d0["date"], "%Y-%m-%d").strftime("%b")
+        if ym not in months_seen:
+            months_seen.add(ym)
+            x = origin_x + wi * (cell + gap)
+            els.append(
+                f'<text class="mono" x="{x}" y="44" font-size="10" fill="{p["ink_soft"]}">{mon}</text>'
+            )
+
+    # day-of-week labels (Mon / Wed / Fri) — GitHub weekday: 0=Sun … 6=Sat
+    for di, lab in ((1, "Mon"), (3, "Wed"), (5, "Fri")):
+        y = origin_y + di * (cell + gap) + cell * 0.75
+        els.append(
+            f'<text class="mono" x="14" y="{y}" font-size="10" fill="{p["ink_soft"]}">{lab}</text>'
+        )
+
     for wi, week in enumerate(weeks):
         for di, day in enumerate(week):
             n = day["contributionCount"]
@@ -398,29 +433,35 @@ def gen_activity(stats: dict, theme: str) -> str:
             y = origin_y + di * (cell + gap)
             fill = p["paper2"] if lv == 0 else p["accent"]
             op = 1.0 if lv == 0 else opac[lv]
+            rx = min(2, cell * 0.2)
             els.append(
-                f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" fill="{fill}" opacity="{op:.2f}" '
-                f'stroke="{p["ink"]}" stroke-width="0.4" stroke-opacity="0.15"/>'
+                f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="{rx}" '
+                f'fill="{fill}" opacity="{op:.2f}"/>'
             )
 
-    # legend
-    lx = 16
-    legend = f'<text class="mono" x="{lx}" y="{h - 22}" font-size="10" fill="{p["ink_soft"]}">less</text>'
+    total = stats["contrib_year"]
+    grid_bottom = origin_y + 7 * (cell + gap) + 8
+    legend = (
+        f'<text class="mono" x="14" y="{grid_bottom + 14}" font-size="10" fill="{p["ink_soft"]}">less</text>'
+    )
     for i, op in enumerate(opac):
         fill = p["paper2"] if i == 0 else p["accent"]
         legend += (
-            f'<rect x="{lx + 36 + i * 14}" y="{h - 32}" width="10" height="10" '
-            f'fill="{fill}" opacity="{op if i else 1:.2f}" stroke="{p["ink"]}" stroke-width="0.5"/>'
+            f'<rect x="{48 + i * 14}" y="{grid_bottom + 4}" width="10" height="10" rx="2" '
+            f'fill="{fill}" opacity="{op if i else 1:.2f}"/>'
         )
-    legend += f'<text class="mono" x="{lx + 36 + 5 * 14 + 8}" y="{h - 22}" font-size="10" fill="{p["ink_soft"]}">more</text>'
     legend += (
-        f'<text class="mono" x="{w - 20}" y="{h - 22}" font-size="10" fill="{p["accent"]}" text-anchor="end">'
-        f'{stats["contrib_year"]} this year</text>'
+        f'<text class="mono" x="{48 + 5 * 14 + 8}" y="{grid_bottom + 14}" font-size="10" '
+        f'fill="{p["ink_soft"]}">more</text>'
+        f'<text class="mono" x="{w - 24}" y="{grid_bottom + 14}" font-size="12" fill="{p["accent"]}" '
+        f'text-anchor="end">{total} contributions in the last year</text>'
     )
 
+    # bump height if needed
+    h = max(h, int(grid_bottom + 28 + 5))
+
     inner = (
-        panel(w, h, p, "FIG. 04 / ACTIVITY", "[26 WK]")
-        + f'<text class="mono" x="16" y="42" font-size="11" fill="{p["ink_soft"]}">contribution heatmap · orange = commits</text>'
+        panel(w, h, p, "FIG. 04 / ACTIVITY", f"[{n_weeks} WK]")
         + "".join(els)
         + legend
     )
@@ -429,8 +470,8 @@ def gen_activity(stats: dict, theme: str) -> str:
         w,
         h,
         theme,
-        "Contribution activity",
-        f'{stats["contrib_year"]} contributions this year',
+        f"{total} contributions in the last year",
+        f"Full-year contribution heatmap · {n_weeks} weeks · orange intensity",
     )
 
 
@@ -506,15 +547,15 @@ def gen_readme(profile: dict, stats: dict) -> str:
     <td width="50%" valign="top">
 {pic("stats", "Repository statistics")}
 <br/>
-{pic("languages", "Language breakdown")}
+{pic("habits", "Commit habits by weekday")}
     </td>
     <td width="50%" valign="top">
-{pic("activity", "Contribution heatmap")}
-<br/>
-{pic("habits", "Commit habits by weekday")}
+{pic("languages", "Language breakdown")}
     </td>
   </tr>
 </table>
+
+{pic("activity", "Full-year contribution heatmap")}
 
 {pic("repos", "Top repositories")}
 

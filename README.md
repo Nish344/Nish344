@@ -30,23 +30,23 @@
 </picture>
 <br/>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg"/>
-  <img src="assets/languages-light.svg" alt="Language breakdown" width="100%"/>
-</picture>
-    </td>
-    <td width="50%" valign="top">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg"/>
-  <img src="assets/activity-light.svg" alt="Contribution heatmap" width="100%"/>
-</picture>
-<br/>
-<picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/habits-dark.svg"/>
   <img src="assets/habits-light.svg" alt="Commit habits by weekday" width="100%"/>
 </picture>
     </td>
+    <td width="50%" valign="top">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg"/>
+  <img src="assets/languages-light.svg" alt="Language breakdown" width="100%"/>
+</picture>
+    </td>
   </tr>
 </table>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg"/>
+  <img src="assets/activity-light.svg" alt="Full-year contribution heatmap" width="100%"/>
+</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/repos-dark.svg"/>

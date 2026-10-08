@@ -5,57 +5,57 @@
   "age_days": 1087,
   "followers": 13,
   "following": 11,
-  "public_repos": 22,
+  "public_repos": 34,
   "stars": 23,
   "forks": 5,
   "watchers": 2,
-  "disk_kb": 22716,
+  "disk_kb": 146030,
   "commits_year": 200,
   "prs_year": 14,
   "issues_year": 2,
   "repos_contributed": 22,
-  "merged_prs": 11,
+  "merged_prs": 28,
   "contrib_year": 234,
   "languages": [
     {
+      "name": "Python",
+      "pct": 33.8,
+      "bytes": 1077061
+    },
+    {
       "name": "Dart",
-      "pct": 44.1,
+      "pct": 27.1,
       "bytes": 862599
     },
     {
-      "name": "Python",
-      "pct": 28.2,
-      "bytes": 551530
+      "name": "JavaScript",
+      "pct": 18.1,
+      "bytes": 575935
+    },
+    {
+      "name": "Java",
+      "pct": 6.0,
+      "bytes": 192571
     },
     {
       "name": "HTML",
-      "pct": 9.4,
-      "bytes": 183838
-    },
-    {
-      "name": "JavaScript",
-      "pct": 5.8,
-      "bytes": 113078
-    },
-    {
-      "name": "PLpgSQL",
-      "pct": 4.6,
-      "bytes": 89662
+      "pct": 5.9,
+      "bytes": 186720
     },
     {
       "name": "CSS",
-      "pct": 3.1,
-      "bytes": 61492
+      "pct": 2.9,
+      "bytes": 91688
+    },
+    {
+      "name": "PLpgSQL",
+      "pct": 2.8,
+      "bytes": 89662
     },
     {
       "name": "Shell",
-      "pct": 2.8,
-      "bytes": 55049
-    },
-    {
-      "name": "Jupyter Notebook",
-      "pct": 1.1,
-      "bytes": 22257
+      "pct": 1.8,
+      "bytes": 56403
     }
   ],
   "weekday": {
