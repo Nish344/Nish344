@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 400 200" role="img" aria-labelledby="t d">
 <title id="t">Commit habits by weekday</title>
-<desc id="d">{'Mon': 28, 'Tue': 27, 'Wed': 27, 'Thu': 39, 'Fri': 38, 'Sat': 25, 'Sun': 50}</desc>
+<desc id="d">{'Mon': 28, 'Tue': 27, 'Wed': 27, 'Thu': 40, 'Fri': 38, 'Sat': 25, 'Sun': 50}</desc>
 <style><![CDATA[ .mono { font-family: "JetBrains Mono","IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace; } ]]></style>
   <rect width="400" height="200" fill="#F2EFE6"/>
 
@@ -23,9 +23,9 @@
   <text class="mono" x="142" y="176" font-size="10" fill="#55534C" text-anchor="middle">Wed</text>
   <text class="mono" x="142" y="105.4" font-size="10" fill="#111110" text-anchor="middle">27</text>
 
-  <rect x="178" y="89.8" width="28" height="70.2" fill="#FF5F00" opacity="0.88"/>
+  <rect x="178" y="88.0" width="28" height="72.0" fill="#FF5F00" opacity="0.89"/>
   <text class="mono" x="192" y="176" font-size="10" fill="#55534C" text-anchor="middle">Thu</text>
-  <text class="mono" x="192" y="83.8" font-size="10" fill="#111110" text-anchor="middle">39</text>
+  <text class="mono" x="192" y="82.0" font-size="10" fill="#111110" text-anchor="middle">40</text>
 
   <rect x="228" y="91.6" width="28" height="68.4" fill="#FF5F00" opacity="0.87"/>
   <text class="mono" x="242" y="176" font-size="10" fill="#55534C" text-anchor="middle">Fri</text>
