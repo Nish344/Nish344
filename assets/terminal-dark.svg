@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 830 320" role="img" aria-labelledby="t d">
+<title id="t">nishanth-lab shell recording</title>
+<desc id="d">Recorded terminal session: whoami, ls projects, cat about.md. Not interactive.</desc>
+<style><![CDATA[
+  .mono { font-family: "JetBrains Mono","IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace; }
+  .static { display: block; }
+  .anim { display: none; }
+  @media (prefers-reduced-motion: no-preference) {
+    .static { display: none; }
+    .anim { display: block; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .static { display: block; }
+    .anim { display: none; }
+    .cursor { opacity: 1 !important; }
+  }
+]]></style>
+  <rect width="830" height="320" fill="#0F0F0E"/>
+  <rect x="14" y="14" width="808" height="298" fill="#F2EFE6"/>
+  <rect x="8" y="8" width="808" height="298" fill="#181816" stroke="#F2EFE6" stroke-width="2"/>
+  <rect x="8" y="8" width="808" height="28" fill="#181816" stroke="#F2EFE6" stroke-width="2"/>
+  <text class="mono" x="20" y="26" font-size="11" fill="#9A978D" letter-spacing="0.06em">FIG. 01 / SHELL</text>
+  <text class="mono" x="804" y="26" font-size="11" fill="#FF5F00" text-anchor="end" letter-spacing="0.06em">[RECORDING]</text>
+  <circle cx="30" cy="50" r="4" fill="#FF5F00"/>
+  <text class="mono" x="42" y="54" font-size="11" fill="#9A978D">nishanth-lab shell 1.0 · type help</text>
+  <g class="static">
+    <text class="mono" x="28" y="72" font-size="13"><tspan fill="#FF5F00">visitor@nish344:~$</tspan><tspan fill="#F2EFE6"> whoami</tspan></text><text class="mono" x="28" y="94" font-size="13" fill="#9A978D">Nishanth Antony · AI/ML engineer, Bengaluru</text><text class="mono" x="28" y="116" font-size="13"><tspan fill="#FF5F00">visitor@nish344:~$</tspan><tspan fill="#F2EFE6"> ls projects</tspan></text><text class="mono" x="28" y="138" font-size="13" fill="#9A978D">exam-grader/  payrecover/  kwilo/  fediot/  samudra/  veris/</text><text class="mono" x="28" y="160" font-size="13"><tspan fill="#FF5F00">visitor@nish344:~$</tspan><tspan fill="#F2EFE6"> cat about.md</tspan></text><text class="mono" x="28" y="182" font-size="13" fill="#9A978D">I build AI that has to work on Monday.</text><text class="mono" x="28" y="204" font-size="13" fill="#9A978D">Unfamiliar stack? I learn it on the way.</text><text class="mono" x="28" y="226" font-size="13" fill="#FF5F00">visitor@nish344:~$</text>
+    <rect class="cursor" x="168.4" y="214" width="9" height="16" fill="#FF5F00"/>
+  </g>
+  <g class="anim">
+    
+  <defs><clipPath id="tc0"><rect x="28" y="58" width="0" height="20">
+    <animate attributeName="width" values="0;760" dur="0.5s" begin="0.30s" fill="freeze"/>
+  </rect></clipPath></defs>
+  <text class="mono" clip-path="url(#tc0)" x="28" y="72" font-size="13" opacity="0">
+    <animate attributeName="opacity" to="1" dur="0.01s" begin="0.30s" fill="freeze"/>
+    <tspan fill="#FF5F00">visitor@nish344:~$</tspan><tspan fill="#F2EFE6"> whoami</tspan>
+  </text>
+  <text class="mono" x="28" y="94" font-size="13" fill="#9A978D" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="1.00s" fill="freeze"/>
+    Nishanth Antony · AI/ML engineer, Bengaluru
+  </text>
+  <defs><clipPath id="tc2"><rect x="28" y="102" width="0" height="20">
+    <animate attributeName="width" values="0;760" dur="0.5s" begin="1.40s" fill="freeze"/>
+  </rect></clipPath></defs>
+  <text class="mono" clip-path="url(#tc2)" x="28" y="116" font-size="13" opacity="0">
+    <animate attributeName="opacity" to="1" dur="0.01s" begin="1.40s" fill="freeze"/>
+    <tspan fill="#FF5F00">visitor@nish344:~$</tspan><tspan fill="#F2EFE6"> ls projects</tspan>
+  </text>
+  <text class="mono" x="28" y="138" font-size="13" fill="#9A978D" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="2.10s" fill="freeze"/>
+    exam-grader/  payrecover/  kwilo/  fediot/  samudra/  veris/
+  </text>
+  <defs><clipPath id="tc4"><rect x="28" y="146" width="0" height="20">
+    <animate attributeName="width" values="0;760" dur="0.5s" begin="2.50s" fill="freeze"/>
+  </rect></clipPath></defs>
+  <text class="mono" clip-path="url(#tc4)" x="28" y="160" font-size="13" opacity="0">
+    <animate attributeName="opacity" to="1" dur="0.01s" begin="2.50s" fill="freeze"/>
+    <tspan fill="#FF5F00">visitor@nish344:~$</tspan><tspan fill="#F2EFE6"> cat about.md</tspan>
+  </text>
+  <text class="mono" x="28" y="182" font-size="13" fill="#9A978D" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="3.20s" fill="freeze"/>
+    I build AI that has to work on Monday.
+  </text>
+  <text class="mono" x="28" y="204" font-size="13" fill="#9A978D" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="3.60s" fill="freeze"/>
+    Unfamiliar stack? I learn it on the way.
+  </text>
+  <text class="mono" x="28" y="226" font-size="13" fill="#FF5F00" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.15s" begin="4.00s" fill="freeze"/>
+    visitor@nish344:~$
+  </text>
+  <rect class="cursor" x="168.4" y="214" width="9" height="16" fill="#FF5F00" opacity="0">
+    <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.02;1" dur="4.00s" fill="freeze"/>
+  </rect>
+  <rect class="cursor" x="168.4" y="214" width="9" height="16" fill="#FF5F00">
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.45;0.55;1" dur="1.05s" begin="4.00s" repeatCount="indefinite"/>
+  </rect>
+
+  </g>
+  <text class="mono" x="28" y="292" font-size="10" fill="#9A978D" letter-spacing="0.04em">recording · not a live shell · press / on nishanthantony.dev</text>
+</svg>

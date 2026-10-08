@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 830 140" role="img" aria-labelledby="t d">
+<title id="t">Architecture: Federated IoT anomaly detector</title>
+<desc id="d">clients(camera/sensor/controller) → RFRE features → FedProx aggregate → anomaly score; no raw packets leave</desc>
+<style><![CDATA[
+  .mono { font-family: "JetBrains Mono","IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace; }
+  
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; }
+  .typed, .line, .cursor, .reveal { opacity: 1 !important; }
+  .clip-reveal { animation: none !important; }
+}
+
+]]></style>
+
+  <rect width="830" height="140" fill="#0F0F0E"/>
+  <text class="mono" x="20" y="24" font-size="11" fill="#9A978D" letter-spacing="0.06em">FIG. 05A / PIPELINE</text>
+  <rect x="20" y="40" width="140" height="48" fill="#0F0F0E" stroke="#F2EFE6" stroke-width="2"/><text class="mono" x="90.0" y="68" font-size="10" fill="#F2EFE6" text-anchor="middle">clients(camera/senso…</text><line x1="160" y1="64" x2="184" y2="64" stroke="#F2EFE6" stroke-width="1.5"/><polygon points="188,64 180,60 180,68" fill="#FF5F00"/><rect x="188" y="40" width="140" height="48" fill="#0F0F0E" stroke="#F2EFE6" stroke-width="2"/><text class="mono" x="258.0" y="68" font-size="10" fill="#F2EFE6" text-anchor="middle">RFRE features</text><line x1="328" y1="64" x2="352" y2="64" stroke="#F2EFE6" stroke-width="1.5"/><polygon points="356,64 348,60 348,68" fill="#FF5F00"/><rect x="356" y="40" width="140" height="48" fill="#0F0F0E" stroke="#F2EFE6" stroke-width="2"/><text class="mono" x="426.0" y="68" font-size="10" fill="#F2EFE6" text-anchor="middle">FedProx aggregate</text><line x1="496" y1="64" x2="520" y2="64" stroke="#F2EFE6" stroke-width="1.5"/><polygon points="524,64 516,60 516,68" fill="#FF5F00"/><rect x="524" y="40" width="140" height="48" fill="#0F0F0E" stroke="#F2EFE6" stroke-width="2"/><text class="mono" x="594.0" y="68" font-size="10" fill="#F2EFE6" text-anchor="middle">anomaly score; no ra…</text>
+  <text class="mono" x="20" y="124" font-size="10" fill="#9A978D">clients(camera/sensor/controller) → RFRE features → FedProx aggregate → anomaly score; no raw packets leave</text>
+
+</svg>

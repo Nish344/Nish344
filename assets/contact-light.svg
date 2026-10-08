@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 830 200" role="img" aria-labelledby="t d">
+<title id="t">Contact Nishanth Antony</title>
+<desc id="d">Email nishanthantony5@gmail.com. GitHub github.com/Nish344. LinkedIn in/nishanth-antony.</desc>
+<style><![CDATA[
+  .mono { font-family: "JetBrains Mono","IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace; }
+  
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; }
+  .typed, .line, .cursor, .reveal { opacity: 1 !important; }
+  .clip-reveal { animation: none !important; }
+}
+
+]]></style>
+
+  <rect width="830" height="200" fill="#F2EFE6"/>
+  <rect x="14" y="14" width="808" height="178" fill="#111110"/>
+  <rect x="8" y="8" width="808" height="178" fill="#FF5F00" stroke="#111110" stroke-width="2"/>
+  <text class="mono" x="36" y="32" font-size="11" fill="#111110" letter-spacing="0.06em">FIG. 10 / CONTACT</text>
+  <text class="mono" x="788" y="32" font-size="11" fill="#111110" text-anchor="end" letter-spacing="0.06em">[OPEN]</text>
+  <text x="36" y="66" font-size="26" fill="#111110" font-family='"Instrument Serif",Newsreader,Georgia,"Times New Roman",serif'>Got a problem that has to <tspan font-style="italic">work</tspan>?</text><rect x="262.98" y="72" width="47.788" height="2.5" fill="#111110"/>
+  
+  <text class="mono" x="36.0" y="104" font-size="10" fill="#111110" opacity="0.7" letter-spacing="0.06em">EMAIL</text>
+  <text class="mono" x="36.0" y="122" font-size="14" fill="#111110">nishanthantony5@gmail.com</text>
+
+  <text class="mono" x="440.0" y="104" font-size="10" fill="#111110" opacity="0.7" letter-spacing="0.06em">GITHUB</text>
+  <text class="mono" x="440.0" y="122" font-size="14" fill="#111110">github.com/Nish344</text>
+
+  <text class="mono" x="36.0" y="140" font-size="10" fill="#111110" opacity="0.7" letter-spacing="0.06em">LINKEDIN</text>
+  <text class="mono" x="36.0" y="158" font-size="14" fill="#111110">in/nishanth-antony</text>
+
+  <text class="mono" x="440.0" y="140" font-size="10" fill="#111110" opacity="0.7" letter-spacing="0.06em">PORTFOLIO</text>
+  <text class="mono" x="440.0" y="158" font-size="14" fill="#111110">nishanthantony.dev</text>
+
+
+</svg>
