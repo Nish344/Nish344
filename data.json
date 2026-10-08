@@ -5,9 +5,9 @@
     "handle": "nish344",
     "tagline": "I build AI that has to work on Monday.",
     "positioning": "Vision-LLM graders, payment-recovery agents, and the backend underneath.",
-    "location": "Bengaluru, IN · UTC+5:30",
+    "location": "Bengaluru, IN \u00b7 UTC+5:30",
     "availability": "OPEN TO: AI/ML ROLES, 2027",
-    "focus": "Kwilo AI · federated IoT paper",
+    "focus": "Kwilo AI \u00b7 federated IoT paper",
     "last_updated": "2026-10-08",
     "email": "nishanthantony5@gmail.com",
     "github": "https://github.com/Nish344",
@@ -21,11 +21,11 @@
     "phone": "+91 96321 48834"
   },
   "about": {
-    "file_header": "about.md · utf-8 · lf · last edited 2026-10-08",
+    "file_header": "about.md \u00b7 utf-8 \u00b7 lf \u00b7 last edited 2026-10-08",
     "avatar_initials": "N.A.",
     "body": [
       "I'm Nishanth. I build LLM systems that have to be right, then the boring code that keeps them right.",
-      "Final-year CS at Bangalore Institute of Technology (IoT / cybersecurity / blockchain, CGPA 8.50). AI/ML intern at Kwilo AI since April 2026 — answer-script grading and the product around it.",
+      "Final-year CS at Bangalore Institute of Technology (IoT / cybersecurity / blockchain, CGPA 8.50). AI/ML intern at Kwilo AI since April 2026 \u2014 answer-script grading and the product around it.",
       "I don't pick a lane. I pick a problem and learn whatever stack it lives in: 100+ CTFs, vision-LLM eval harnesses, LangGraph agents, Postgres RLS, even servo trigonometry for a face-tracking water gun.",
       "Currently: shipping ERP and AI at Kwilo, probing emotion out of 826 Hindi clips, 290 LeetCode (253 in Java).",
       "Off the clock: Lazy Monks (10+ hackathons, 3rd at BuzzOnEarth @ IIT Kanpur), first at Turing Much, core member of cryptX."
@@ -40,11 +40,11 @@
     }
   },
   "annotations": [
-    "← this README is a recording. the live shell is on nishanthantony.dev",
-    "← 0.855 MAE = usually off by less than one mark",
-    "← the empty skills cell is deliberate. honest beats exhaustive",
-    "← 0.98 AUC arrived after fixing a shard bug, not after tuning",
-    "← two notebook rows are failures. those taught me the most"
+    "\u2190 this README is a recording. the live shell is on nishanthantony.dev",
+    "\u2190 0.855 MAE = usually off by less than one mark",
+    "\u2190 the empty skills cell is deliberate. honest beats exhaustive",
+    "\u2190 0.98 AUC arrived after fixing a shard bug, not after tuning",
+    "\u2190 two notebook rows are failures. those taught me the most"
   ],
   "projects": [
     {
@@ -52,68 +52,137 @@
       "fig": "02",
       "year": "2026",
       "status": "SHIPPED",
-      "eyebrow": "Kwilo AI · production research",
+      "eyebrow": "Kwilo AI \u00b7 production research",
       "title": "Vision-LLM exam grader",
       "title_em": "exam grader",
       "problem": "Marking handwritten university scripts eats teachers' evenings; a model two marks off per subpart is worse than no model.",
-      "approach": "Scanned PDF → page images → subpart map → vision LLM with rubric + few teacher exemplars. Benchmarked GPT-5.4 Mini, Gemini 3 Flash and 3.1 Pro over 4 subjects / 11 cells.",
-      "result": "Pooled MAE 0.855 marks/subpart; 81.7% within ±1 of the teacher; −28% error vs zero-shot GPT.",
+      "approach": "Scanned PDF \u2192 page images \u2192 subpart map \u2192 vision LLM with rubric + few teacher exemplars. Benchmarked GPT-5.4 Mini, Gemini 3 Flash and 3.1 Pro over 4 subjects / 11 cells.",
+      "result": "Pooled MAE 0.855 marks/subpart; 81.7% within \u00b11 of the teacher; \u221228% error vs zero-shot GPT.",
       "lesson": "Exemplars beat model size: few-shot Flash (0.890) beat zero-shot Pro (1.195). A harness that writes run manifests beats any single prompt tweak.",
-      "stack": ["python", "azure openai", "vertex ai", "pymupdf", "uv", "matplotlib"],
+      "stack": [
+        "python",
+        "azure openai",
+        "vertex ai",
+        "pymupdf",
+        "uv",
+        "matplotlib"
+      ],
       "metrics": [
-        {"label": "pooled MAE (marks/subpart)", "value": "0.855", "hot": true},
-        {"label": "error vs zero-shot GPT", "value": "−28%", "hot": false},
-        {"label": "within ±1 of teacher", "value": "81.7%", "hot": false}
+        {
+          "label": "pooled MAE (marks/subpart)",
+          "value": "0.855",
+          "hot": true
+        },
+        {
+          "label": "error vs zero-shot GPT",
+          "value": "\u221228%",
+          "hot": false
+        },
+        {
+          "label": "within \u00b11 of teacher",
+          "value": "81.7%",
+          "hot": false
+        }
       ],
       "links": [
-        {"label": "portfolio write-up", "url": "https://nishanthantony.dev/#p-grader"}
+        {
+          "label": "portfolio write-up",
+          "url": "https://nishanthantony.dev/#p-grader"
+        }
       ],
-      "architecture": "pdf → pages → subpart map → prompt(rubric+exemplars) → vision LLM → marks+evidence → metrics vs held-out teacher marks"
+      "architecture": "pdf \u2192 pages \u2192 subpart map \u2192 prompt(rubric+exemplars) \u2192 vision LLM \u2192 marks+evidence \u2192 metrics vs held-out teacher marks"
     },
     {
       "id": "payrecover",
       "fig": "03",
       "year": "2026",
       "status": "SHIPPED",
-      "eyebrow": "Razorpay AI Buildathon · track 03",
+      "eyebrow": "Razorpay AI Buildathon \u00b7 track 03",
       "title": "PayRecover",
       "title_em": null,
       "problem": "A failed UPI or card payment can't be silently re-charged. Merchants either spam the customer or lose the sale.",
       "approach": "Rules diagnose the failure; Gemini only sees ambiguous cases. Every action passes a policy gate (caps + kill switch) into an append-only audit log.",
       "result": "31.3% of failed revenue recovered (INR 44,205 of 141,353); 76.1% of recoverable customers captured across 80 seeded cases.",
       "lesson": "The model call is the easy 10%. The agent is the policy around it: typed timeouts, writes that can't double-fire, a stop that stays stopped.",
-      "stack": ["python", "razorpay api", "gemini", "sqlite", "pytest"],
+      "stack": [
+        "python",
+        "razorpay api",
+        "gemini",
+        "sqlite",
+        "pytest"
+      ],
       "metrics": [
-        {"label": "failed revenue recovered", "value": "31.3%", "hot": true},
-        {"label": "recoverable customers", "value": "76.1%", "hot": false},
-        {"label": "seeded dry-run cases", "value": "80", "hot": false}
+        {
+          "label": "failed revenue recovered",
+          "value": "31.3%",
+          "hot": true
+        },
+        {
+          "label": "recoverable customers",
+          "value": "76.1%",
+          "hot": false
+        },
+        {
+          "label": "seeded dry-run cases",
+          "value": "80",
+          "hot": false
+        }
       ],
       "links": [
-        {"label": "repo", "url": "https://github.com/Nish344/payrecover-agent"},
-        {"label": "demo video", "url": "https://www.youtube.com/watch?v=ZIid1JJSooE"}
+        {
+          "label": "repo",
+          "url": "https://github.com/Nish344/payrecover-agent"
+        },
+        {
+          "label": "demo video",
+          "url": "https://www.youtube.com/watch?v=ZIid1JJSooE"
+        }
       ],
-      "architecture": "failed payment → diagnose(rules, then LLM) → policy gate → act → audit log; act loops on next tick"
+      "architecture": "failed payment \u2192 diagnose(rules, then LLM) \u2192 policy gate \u2192 act \u2192 audit log; act loops on next tick"
     },
     {
       "id": "kwilo",
       "fig": "04",
       "year": "2026",
       "status": "IN PROD",
-      "eyebrow": "Kwilo AI · Apr–May, Jul 2026–now",
+      "eyebrow": "Kwilo AI \u00b7 Apr\u2013May, Jul 2026\u2013now",
       "title": "Shipping on an AI learning platform",
       "title_em": "AI learning platform",
-      "problem": "Schools run exams, fees and admissions here — a bug costs real money or leaks a parent's phone number.",
-      "approach": "Answer sheets auto-matched (filename → header OCR, never blocking upload). Blog stack end-to-end. Race-safe fee installments. Admissions with primary guardian + A4 form.",
+      "problem": "Schools run exams, fees and admissions here \u2014 a bug costs real money or leaks a parent's phone number.",
+      "approach": "Answer sheets auto-matched (filename \u2192 header OCR, never blocking upload). Blog stack end-to-end. Race-safe fee installments. Admissions with primary guardian + A4 form.",
       "result": "0 uploads blocked when OCR fails; 5 product areas shipped; 2 guardians/admission with one as parent login.",
       "lesson": "A self-reported phone number is not proof of identity. Lock the row before two payments settle the same installment milliseconds apart.",
-      "stack": ["fastapi", "sqlalchemy async", "postgres + RLS", "alembic", "react 19", "tanstack query", "gemini"],
+      "stack": [
+        "fastapi",
+        "sqlalchemy async",
+        "postgres + RLS",
+        "alembic",
+        "react 19",
+        "tanstack query",
+        "gemini"
+      ],
       "metrics": [
-        {"label": "uploads blocked by OCR", "value": "0", "hot": true},
-        {"label": "product areas shipped", "value": "5", "hot": false},
-        {"label": "guardians / admission", "value": "2", "hot": false}
+        {
+          "label": "uploads blocked by OCR",
+          "value": "0",
+          "hot": true
+        },
+        {
+          "label": "product areas shipped",
+          "value": "5",
+          "hot": false
+        },
+        {
+          "label": "guardians / admission",
+          "value": "2",
+          "hot": false
+        }
       ],
       "links": [
-        {"label": "kwilo.ai", "url": "https://kwilo.ai"}
+        {
+          "label": "kwilo.ai",
+          "url": "https://kwilo.ai"
+        }
       ],
       "architecture": null
     },
@@ -122,136 +191,363 @@
       "fig": "05",
       "year": "2026",
       "status": "RESEARCH",
-      "eyebrow": "IoT security · paper on the way",
+      "eyebrow": "IoT security \u00b7 paper on the way",
       "title": "Federated IoT anomaly detector",
       "title_em": "anomaly detector",
-      "problem": "IoT intrusion detection usually means shipping raw traffic from every camera and sensor to one server — a privacy and bandwidth problem.",
+      "problem": "IoT intrusion detection usually means shipping raw traffic from every camera and sensor to one server \u2014 a privacy and bandwidth problem.",
       "approach": "Dockerised federated clients (cameras, sensors, controllers); RFRE on IP/port features; FedAvg vs FedProx against spoofing and DDoS.",
       "result": "Aggregated AUC 0.98 with FedProx; 3 device classes; 0 raw packets leave a client.",
       "lesson": "Most 'model instability' was a data-partitioning bug. Check the shards before you tune the optimizer.",
-      "stack": ["python", "pytorch", "docker", "fedprox", "scikit-learn"],
+      "stack": [
+        "python",
+        "pytorch",
+        "docker",
+        "fedprox",
+        "scikit-learn"
+      ],
       "metrics": [
-        {"label": "aggregated AUC (FedProx)", "value": "0.98", "hot": true},
-        {"label": "device classes", "value": "3", "hot": false},
-        {"label": "raw packets leaving client", "value": "0", "hot": false}
+        {
+          "label": "aggregated AUC (FedProx)",
+          "value": "0.98",
+          "hot": true
+        },
+        {
+          "label": "device classes",
+          "value": "3",
+          "hot": false
+        },
+        {
+          "label": "raw packets leaving client",
+          "value": "0",
+          "hot": false
+        }
       ],
       "links": [
-        {"label": "progress report", "url": "https://nishanthantony.dev/fediot-progress.pdf"}
+        {
+          "label": "progress report",
+          "url": "https://nishanthantony.dev/fediot-progress.pdf"
+        }
       ],
-      "architecture": "clients(camera/sensor/controller) → RFRE features → FedProx aggregate → anomaly score; no raw packets leave"
+      "architecture": "clients(camera/sensor/controller) \u2192 RFRE features \u2192 FedProx aggregate \u2192 anomaly score; no raw packets leave"
     },
     {
       "id": "samudra",
       "fig": "06",
       "year": "2025",
       "status": "SIH 2025",
-      "eyebrow": "Smart India Hackathon · INCOIS",
+      "eyebrow": "Smart India Hackathon \u00b7 INCOIS",
       "title": "Samudra Prahari",
       "title_em": "Prahari",
-      "problem": "When a coastal hazard hits, the network goes first — and reports that get out mix real sightings, panic, and recycled photos.",
-      "approach": "Offline BLE-mesh field reports + social scraper. Owned IndicBERT sentiment and image verification → confidence score per report on a PostGIS map.",
+      "problem": "When a coastal hazard hits, the network goes first \u2014 and reports that get out mix real sightings, panic, and recycled photos.",
+      "approach": "Offline BLE-mesh field reports + social scraper. Owned IndicBERT sentiment and image verification \u2192 confidence score per report on a PostGIS map.",
       "result": "0 internet needed to file via BLE mesh; 3 pillars (app / scraper / dashboard); 2 AI modules owned.",
       "lesson": "Coastal posts mix English, Hindi and regional languages in one sentence. A report needs a confidence score before it reaches a map people act on.",
-      "stack": ["python", "indicbert", "pytorch", "fastapi", "supabase + postgis", "react native"],
+      "stack": [
+        "python",
+        "indicbert",
+        "pytorch",
+        "fastapi",
+        "supabase + postgis",
+        "react native"
+      ],
       "metrics": [
-        {"label": "internet to file (BLE)", "value": "0", "hot": true},
-        {"label": "pillars", "value": "3", "hot": false},
-        {"label": "AI modules owned", "value": "2", "hot": false}
+        {
+          "label": "internet to file (BLE)",
+          "value": "0",
+          "hot": true
+        },
+        {
+          "label": "pillars",
+          "value": "3",
+          "hot": false
+        },
+        {
+          "label": "AI modules owned",
+          "value": "2",
+          "hot": false
+        }
       ],
       "links": [
-        {"label": "source", "url": "https://github.com/nikhil-r0/samudra-prahari-ecosystem"},
-        {"label": "demo video", "url": "https://www.youtube.com/watch?v=5G5odwkGp0A"}
+        {
+          "label": "source",
+          "url": "https://github.com/nikhil-r0/samudra-prahari-ecosystem"
+        },
+        {
+          "label": "demo video",
+          "url": "https://www.youtube.com/watch?v=5G5odwkGp0A"
+        }
       ],
-      "architecture": "social posts → IndicBERT; field photo → image check; both → confidence → PostGIS dashboard"
+      "architecture": "social posts \u2192 IndicBERT; field photo \u2192 image check; both \u2192 confidence \u2192 PostGIS dashboard"
     },
     {
       "id": "veris",
       "fig": "07",
       "year": "2025",
       "status": "HACKATHON",
-      "eyebrow": "Recurzive V2 · Lazy Monks",
+      "eyebrow": "Recurzive V2 \u00b7 Lazy Monks",
       "title": "Veris truth engine",
       "title_em": "truth engine",
       "problem": "Claims spread faster than anyone can check who started them or who is amplifying them.",
-      "approach": "LangGraph state machine: collector → verifier → graph builder → refiner (dig deeper or stop) → reporter.",
-      "result": "5 graph nodes in the loop; trust score 0–1 per evidence item; agent API + Next.js UI.",
+      "approach": "LangGraph state machine: collector \u2192 verifier \u2192 graph builder \u2192 refiner (dig deeper or stop) \u2192 reporter.",
+      "result": "5 graph nodes in the loop; trust score 0\u20131 per evidence item; agent API + Next.js UI.",
       "lesson": "An agent loop needs an explicit stopping rule and typed shared state before it needs a better model. Pydantic on every edge kept the demo alive.",
-      "stack": ["python", "langgraph", "pydantic", "fastapi", "next.js"],
+      "stack": [
+        "python",
+        "langgraph",
+        "pydantic",
+        "fastapi",
+        "next.js"
+      ],
       "metrics": [
-        {"label": "graph nodes", "value": "5", "hot": true},
-        {"label": "trust score / item", "value": "0–1", "hot": false},
-        {"label": "apps shipped", "value": "2", "hot": false}
+        {
+          "label": "graph nodes",
+          "value": "5",
+          "hot": true
+        },
+        {
+          "label": "trust score / item",
+          "value": "0\u20131",
+          "hot": false
+        },
+        {
+          "label": "apps shipped",
+          "value": "2",
+          "hot": false
+        }
       ],
       "links": [
-        {"label": "repo", "url": "https://github.com/nikhil-r0/veris-ecosystem"},
-        {"label": "demo video", "url": "https://www.youtube.com/watch?v=OmviNm0HJbg&t=1s"}
+        {
+          "label": "repo",
+          "url": "https://github.com/nikhil-r0/veris-ecosystem"
+        },
+        {
+          "label": "demo video",
+          "url": "https://www.youtube.com/watch?v=OmviNm0HJbg&t=1s"
+        }
       ],
-      "architecture": "query → collector → verifier → graph → refiner ⟲ collector | → reporter"
+      "architecture": "query \u2192 collector \u2192 verifier \u2192 graph \u2192 refiner \u27f2 collector | \u2192 reporter"
     }
   ],
   "notebook": [
-    {"date": "2026-10", "entry": "w2v-BERT 2.0 vs Whisper-large encoders", "tag": "ML", "result": "OOF `0.9346`, best so far. public LB didn't move; private split did."},
-    {"date": "2026-09", "entry": "Fine-tuning Whisper-large on 826 clips", "tag": "ML", "result": "lost to frozen probe, `0.904` vs `0.925`. overfits by epoch 5."},
-    {"date": "2026-09", "entry": "Face-tracking water gun", "tag": "IOT", "result": "MediaPipe face centre → pan/tilt → two ESP32 servos. shoot is still a stub."},
-    {"date": "2026-07", "entry": "AssetFlow, 8-hour hackathon", "tag": "HACK", "result": "owned asset track: registry, allocation state machine, transfers, overdue flagger."},
-    {"date": "2026-05", "entry": "Gemini 3.1 Pro vs 3 Flash, zero-shot grading", "tag": "EVAL", "result": "Flash wins File Structures by `0.42` MAE, loses Math by `0.54`."},
-    {"date": "2026-05", "entry": "Sarvam document OCR as grading front-end", "tag": "EVAL", "result": "benchmarked, then removed. documented why so nobody re-tries it blind."},
-    {"date": "2026-04", "entry": "Kannada name generator, char-level GRU", "tag": "ML", "result": "loss `2.08` → `1.41` over 10k epochs. mostly merely plausible."},
-    {"date": "2025-12", "entry": "OWASP Top 10 lab series", "tag": "SEC", "result": "`17/17` PortSwigger labs written up. README updates via Actions."},
-    {"date": "2025-11", "entry": "DFA-based intrusion detection, from scratch", "tag": "SEC", "result": "Snort-style rules → DFA + PCRE, TCP reassembly, live dashboard."},
-    {"date": "2025-08", "entry": "REINFOSEC CTF sprint", "tag": "SEC", "result": "`100+` challenges in 8 weeks. TryHackMe top `2%`."},
-    {"date": "2024-10", "entry": "Green Terrace, BuzzOnEarth @ IIT Kanpur", "tag": "HACK", "result": "3rd place. first podium, first all-nighter that paid off."}
+    {
+      "date": "2026-10",
+      "entry": "w2v-BERT 2.0 vs Whisper-large encoders",
+      "tag": "ML",
+      "result": "OOF `0.9346`, best so far. public LB didn't move; private split did."
+    },
+    {
+      "date": "2026-09",
+      "entry": "Fine-tuning Whisper-large on 826 clips",
+      "tag": "ML",
+      "result": "lost to frozen probe, `0.904` vs `0.925`. overfits by epoch 5."
+    },
+    {
+      "date": "2026-09",
+      "entry": "Face-tracking water gun",
+      "tag": "IOT",
+      "result": "MediaPipe face centre \u2192 pan/tilt \u2192 two ESP32 servos. shoot is still a stub."
+    },
+    {
+      "date": "2026-07",
+      "entry": "AssetFlow, 8-hour hackathon",
+      "tag": "HACK",
+      "result": "owned asset track: registry, allocation state machine, transfers, overdue flagger."
+    },
+    {
+      "date": "2026-05",
+      "entry": "Gemini 3.1 Pro vs 3 Flash, zero-shot grading",
+      "tag": "EVAL",
+      "result": "Flash wins File Structures by `0.42` MAE, loses Math by `0.54`."
+    },
+    {
+      "date": "2026-05",
+      "entry": "Sarvam document OCR as grading front-end",
+      "tag": "EVAL",
+      "result": "benchmarked, then removed. documented why so nobody re-tries it blind."
+    },
+    {
+      "date": "2026-04",
+      "entry": "Kannada name generator, char-level GRU",
+      "tag": "ML",
+      "result": "loss `2.08` \u2192 `1.41` over 10k epochs. mostly merely plausible."
+    },
+    {
+      "date": "2025-12",
+      "entry": "OWASP Top 10 lab series",
+      "tag": "SEC",
+      "result": "`17/17` PortSwigger labs written up. README updates via Actions."
+    },
+    {
+      "date": "2025-11",
+      "entry": "DFA-based intrusion detection, from scratch",
+      "tag": "SEC",
+      "result": "Snort-style rules \u2192 DFA + PCRE, TCP reassembly, live dashboard."
+    },
+    {
+      "date": "2025-08",
+      "entry": "REINFOSEC CTF sprint",
+      "tag": "SEC",
+      "result": "`100+` challenges in 8 weeks. TryHackMe top `2%`."
+    },
+    {
+      "date": "2024-10",
+      "entry": "Green Terrace, BuzzOnEarth @ IIT Kanpur",
+      "tag": "HACK",
+      "result": "3rd place. first podium, first all-nighter that paid off."
+    }
   ],
   "skills": [
     {
       "domain": "LLMs & agents",
-      "daily": ["few-shot prompts", "Gemini / Vertex", "Azure OpenAI", "eval harnesses"],
-      "comfortable": ["LangGraph", "LangChain", "RAG + pgvector", "Bedrock"],
-      "dabbling": ["Sarvam AI", "Claude API"]
+      "daily": [
+        "few-shot prompts",
+        "Gemini / Vertex",
+        "Azure OpenAI",
+        "eval harnesses"
+      ],
+      "comfortable": [
+        "LangGraph",
+        "LangChain",
+        "RAG + pgvector",
+        "Bedrock"
+      ],
+      "dabbling": [
+        "Sarvam AI",
+        "Claude API"
+      ]
     },
     {
       "domain": "Models & data",
-      "daily": ["pandas", "NumPy"],
-      "comfortable": ["PyTorch", "scikit-learn", "Whisper / w2v-BERT", "matplotlib"],
-      "dabbling": ["TensorFlow", "OpenCV", "MediaPipe", "federated learning"]
+      "daily": [
+        "pandas",
+        "NumPy"
+      ],
+      "comfortable": [
+        "PyTorch",
+        "scikit-learn",
+        "Whisper / w2v-BERT",
+        "matplotlib"
+      ],
+      "dabbling": [
+        "TensorFlow",
+        "OpenCV",
+        "MediaPipe",
+        "federated learning"
+      ]
     },
     {
       "domain": "Backend",
-      "daily": ["FastAPI", "SQLAlchemy async", "PostgreSQL", "Alembic", "pytest"],
-      "comfortable": ["Flask", "Spring Boot", "WebSockets", "Postgres RLS"],
-      "dabbling": ["Supabase", "Firebase", "Prisma"]
+      "daily": [
+        "FastAPI",
+        "SQLAlchemy async",
+        "PostgreSQL",
+        "Alembic",
+        "pytest"
+      ],
+      "comfortable": [
+        "Flask",
+        "Spring Boot",
+        "WebSockets",
+        "Postgres RLS"
+      ],
+      "dabbling": [
+        "Supabase",
+        "Firebase",
+        "Prisma"
+      ]
     },
     {
       "domain": "Frontend",
-      "daily": ["React", "TanStack Query"],
-      "comfortable": ["Tailwind", "Vite", "React Native", "vitest"],
-      "dabbling": ["Next.js", "Phaser"]
+      "daily": [
+        "React",
+        "TanStack Query"
+      ],
+      "comfortable": [
+        "Tailwind",
+        "Vite",
+        "React Native",
+        "vitest"
+      ],
+      "dabbling": [
+        "Next.js",
+        "Phaser"
+      ]
     },
     {
       "domain": "MLOps & cloud",
-      "daily": ["Git", "Docker", "GitHub Actions"],
-      "comfortable": ["GCP Cloud Run + GCS", "Kaggle GPU", "uv"],
-      "dabbling": ["Azure Container Apps", "AWS EC2 / S3", "Cloudflare"]
+      "daily": [
+        "Git",
+        "Docker",
+        "GitHub Actions"
+      ],
+      "comfortable": [
+        "GCP Cloud Run + GCS",
+        "Kaggle GPU",
+        "uv"
+      ],
+      "dabbling": [
+        "Azure Container Apps",
+        "AWS EC2 / S3",
+        "Cloudflare"
+      ]
     },
     {
       "domain": "Languages",
-      "daily": ["Python", "TypeScript"],
-      "comfortable": ["Java", "SQL", "Bash"],
-      "dabbling": ["C", "C++", "Rust (Soroban)"]
+      "daily": [
+        "Python",
+        "TypeScript"
+      ],
+      "comfortable": [
+        "Java",
+        "SQL",
+        "Bash"
+      ],
+      "dabbling": [
+        "C",
+        "C++",
+        "Rust (Soroban)"
+      ]
     },
     {
       "domain": "Security",
-      "daily": ["— (was daily in 2025)"],
-      "comfortable": ["Burp Suite", "nmap", "OWASP Top 10", "API security"],
-      "dabbling": ["sqlmap", "Scapy", "Web Crypto"]
+      "daily": [
+        "\u2014 (was daily in 2025)"
+      ],
+      "comfortable": [
+        "Burp Suite",
+        "nmap",
+        "OWASP Top 10",
+        "API security"
+      ],
+      "dabbling": [
+        "sqlmap",
+        "Scapy",
+        "Web Crypto"
+      ]
     }
   ],
   "terminal": {
     "prompt": "visitor@nish344:~$",
     "session": [
-      {"cmd": "whoami", "out": ["Nishanth Antony · AI/ML engineer, Bengaluru"]},
-      {"cmd": "ls projects", "out": ["exam-grader/  payrecover/  kwilo/  fediot/  samudra/  veris/"]},
-      {"cmd": "cat about.md", "out": ["I build AI that has to work on Monday.", "Unfamiliar stack? I learn it on the way."]}
+      {
+        "cmd": "whoami",
+        "out": [
+          "Nishanth Antony \u00b7 AI/ML engineer, Bengaluru"
+        ]
+      },
+      {
+        "cmd": "ls projects",
+        "out": [
+          "exam-grader/  payrecover/  kwilo/  fediot/  samudra/  veris/"
+        ]
+      },
+      {
+        "cmd": "cat about.md",
+        "out": [
+          "I build AI that has to work on Monday.",
+          "Unfamiliar stack? I learn it on the way."
+        ]
+      }
     ]
   }
 }
