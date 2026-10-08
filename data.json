@@ -3,26 +3,20 @@
     "name": "Nishanth",
     "name_italic": "Antony",
     "handle": "Nish344",
+    "host": "bengaluru",
     "tagline": "AI that has to work on Monday.",
+    "role": "AI/ML engineer",
+    "os": "Ubuntu · Cloudflare Pages",
+    "shell": "bash",
+    "editor": "Cursor",
+    "focus": "Kwilo AI · vision-LLM grading",
+    "hobby": "CTFs · hackathons · Lazy Monks",
+    "languages": ["Python", "TypeScript", "Java", "SQL"],
     "portfolio": "https://nishanthantony.dev/",
     "resume": "https://nishanthantony.dev/resume.pdf",
     "email": "nishanthantony5@gmail.com",
     "linkedin": "https://www.linkedin.com/in/nishanth-antony-b60110289/",
     "leetcode": "https://leetcode.com/u/Nish345/",
-    "last_updated": "2026-10-08"
-  },
-  "spotlight": [
-    {
-      "name": "payrecover-agent",
-      "blurb": "failed-payment recovery under policy caps"
-    },
-    {
-      "name": "owasp-top10-web-security",
-      "blurb": "17/17 PortSwigger labs, auto-updating README"
-    },
-    {
-      "name": "kannada_name_generator",
-      "blurb": "char-level GRU, loss 2.08 → 1.41"
-    }
-  ]
+    "github": "https://github.com/Nish344"
+  }
 }
